@@ -1,1 +1,2 @@
-Chess first attestation version
+Chess first attestation version.
+scripts = bat files.
