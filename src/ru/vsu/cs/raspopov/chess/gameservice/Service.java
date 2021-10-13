@@ -62,7 +62,7 @@ public class Service extends Application {
                         : Color.WHITE, cell.getPos()));
             }
             try {
-                logger.info("Piece was put on: " + cell.getPos() + " successfully.");
+                logger.info("Piece " + cell.getPiece().getName() + " was put on: " + cell.getPos() + " successfully.");
             } catch (Exception e) {
                 logger.error("Cell is not specified for firstInit piece.");
             }
