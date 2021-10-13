@@ -1,17 +1,11 @@
 package ru.vsu.cs.raspopov.chess.graphics;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.vsu.cs.raspopov.chess.essence.board.Board;
-import ru.vsu.cs.raspopov.chess.essence.board.Cell;
-import ru.vsu.cs.raspopov.chess.gameservice.Service;
-
-import java.util.Iterator;
 
 
 public class Table {
