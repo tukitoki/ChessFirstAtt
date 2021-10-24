@@ -17,7 +17,7 @@
             <fileNamePattern>Chess.%d{yyyy-MM-dd}.log</fileNamePattern>
 
             <maxHistory>10</maxHistory>
-            
+
             <totalSizeCap>10GB</totalSizeCap>
 
         </rollingPolicy>

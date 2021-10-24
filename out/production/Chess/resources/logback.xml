@@ -2,8 +2,7 @@
 <configuration>
     <appender name="STDOUT"
               class="ch.qos.logback.core.ConsoleAppender">
-        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
-            by default -->
+
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} %-5level  %logger{30} - %msg%n</pattern>
         </encoder>
@@ -14,13 +13,11 @@
         <file>Chess.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- daily rollover -->
+
             <fileNamePattern>Chess.%d{yyyy-MM-dd}.log</fileNamePattern>
 
-            <!-- Храним файлы логов 10 дней -->
             <maxHistory>10</maxHistory>
 
-            <!-- Максимальный размер файлов лога 30 гигабайт -->
             <totalSizeCap>10GB</totalSizeCap>
 
         </rollingPolicy>
