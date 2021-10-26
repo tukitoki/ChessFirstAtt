@@ -10,9 +10,9 @@ import java.util.Iterator;
 public class Graphics {
 
     public static void imagesOnCells(Table table) {
-        Iterator<Cell> iter = table.getBoard().getGraph().iterator();
-        while (iter.hasNext()) {
-            Cell cell = iter.next();
+        Iterator<Cell> cellIterator = table.getBoard().getGraph().iterator();
+        while (cellIterator.hasNext()) {
+            Cell cell = cellIterator.next();
             if (cell.getPiece() != null) {
                 Image img = new Image("File:pieceImg/" + (cell.getPiece().getColor().equals(Color.BLACK)
                         ? "B"

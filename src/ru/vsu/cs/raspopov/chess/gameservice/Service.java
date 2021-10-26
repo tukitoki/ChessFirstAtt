@@ -27,10 +27,10 @@ public class Service extends Application {
         primaryStage.show();
     }
 
-    private static void firstPieceInit(Board board) {
-        Iterator<Cell> iter = board.getGraph().iterator();
-        while (iter.hasNext()) {
-            Cell cell = iter.next();
+    private void firstPieceInit(Board board) {
+        Iterator<Cell> cellIterator = board.getGraph().iterator();
+        while (cellIterator.hasNext()) {
+            Cell cell = cellIterator.next();
             if (cell.getPos().equals("A8") || cell.getPos().equals("H8") || cell.getPos().equals("A1") || cell.getPos().equals("H1")) {
                 cell.setPiece(new Rook((cell.getPos().equals("A8") || cell.getPos().equals("H8"))
                         ? Color.BLACK
