@@ -14,11 +14,10 @@ import ru.vsu.cs.raspopov.chess.graphics.Table;
 
 import java.util.Iterator;
 
-public class Service extends Application {
+public class Controller extends Application {
 
-    private Graphics graphics = new Graphics();
-
-    private static final Logger logger = LoggerFactory.getLogger(Service.class);
+    private static final Logger logger = LoggerFactory.getLogger(Controller.class);
+    private final Graphics graphics = new Graphics();
 
     public void start(Stage primaryStage) {
         Table table = new Table();
@@ -30,9 +29,7 @@ public class Service extends Application {
     }
 
     private void firstPieceInit(Board board) {
-        Iterator<Cell> cellIterator = board.getGraph().iterator();
-        while (cellIterator.hasNext()) {
-            Cell cell = cellIterator.next();
+        for (Cell cell : board.getGraph()) {
             if (cell.getPos().equals("A8") || cell.getPos().equals("H8") || cell.getPos().equals("A1") || cell.getPos().equals("H1")) {
                 cell.setPiece(new Rook((cell.getPos().equals("A8") || cell.getPos().equals("H8"))
                         ? Color.BLACK
@@ -58,13 +55,13 @@ public class Service extends Application {
                         ? Color.BLACK
                         : Color.WHITE, cell.getPos()));
             }
-            if (cell.getPos().charAt(1) == '7' || cell.getPos().charAt(1) == '2') {
-                cell.setPiece(new Pawn(cell.getPos().charAt(1) == '7'
+            if (cell.getPos().getRow() == 7 || cell.getPos().getRow() == 2) {
+                cell.setPiece(new Pawn(cell.getPos().getRow() == 7
                         ? Color.BLACK
                         : Color.WHITE, cell.getPos()));
             }
             try {
-                logger.info("Piece " + cell.getPiece().getName() + " was put on: " + cell.getPos() + " successfully.");
+                logger.info("Piece " + cell.getPiece().getName() + " was put on: " +  cell.getPos().getColumn() + cell.getPos().getRow() + " successfully.");
             } catch (Exception e) {
                 logger.error("Cell is not specified for firstInit piece.");
             }
