@@ -15,7 +15,6 @@ import ru.vsu.cs.raspopov.chess.essence.pieces.*;
 import ru.vsu.cs.raspopov.chess.graphics.GraphicCell;
 import ru.vsu.cs.raspopov.chess.graphics.Graphics;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -27,6 +26,7 @@ public class Table {
     private ArrayList<GraphicCell> cells;
     private Color currentTurn = Color.WHITE;
     Graphics graphics = new Graphics();
+    Controller controller = new Controller();
 
     public Table() {
         board = new Board();
@@ -52,7 +52,8 @@ public class Table {
                     return;
                 }
             }
-            Controller.endGame(currentTurn);
+            controller.endGame(currentTurn);
+            //Controller.endGame(currentTurn);
         }
     }
 

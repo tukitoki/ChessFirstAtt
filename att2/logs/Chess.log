@@ -6616,3 +6616,71 @@
 10:00:47.374 INFO   r.v.c.r.c.gameservice.Table - Piece R was put on: H8 successfully.
 10:00:47.629 INFO   r.v.c.r.c.gameservice.Table - Table was init successfully.
 10:02:08.696 INFO   r.v.c.r.c.g.Controller - Application launched successfully.
+10:13:05.996 INFO   r.v.c.r.c.essence.board.Board - Board init was successful.
+10:13:06.037 INFO   r.v.c.r.c.gameservice.Table - Piece R was put on: A1 successfully.
+10:13:06.042 INFO   r.v.c.r.c.gameservice.Table - Piece Knt was put on: B1 successfully.
+10:13:06.046 INFO   r.v.c.r.c.gameservice.Table - Piece B was put on: C1 successfully.
+10:13:06.051 INFO   r.v.c.r.c.gameservice.Table - Piece Q was put on: D1 successfully.
+10:13:06.056 INFO   r.v.c.r.c.gameservice.Table - Piece K was put on: E1 successfully.
+10:13:06.056 INFO   r.v.c.r.c.gameservice.Table - Piece B was put on: F1 successfully.
+10:13:06.056 INFO   r.v.c.r.c.gameservice.Table - Piece Knt was put on: G1 successfully.
+10:13:06.056 INFO   r.v.c.r.c.gameservice.Table - Piece R was put on: H1 successfully.
+10:13:06.060 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: A2 successfully.
+10:13:06.061 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: B2 successfully.
+10:13:06.061 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: C2 successfully.
+10:13:06.062 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: D2 successfully.
+10:13:06.063 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: E2 successfully.
+10:13:06.063 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: F2 successfully.
+10:13:06.065 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: G2 successfully.
+10:13:06.065 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: H2 successfully.
+10:13:06.065 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.065 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.065 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.066 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.067 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.067 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.067 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.067 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.067 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.068 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.068 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.068 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.068 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.068 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.069 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.069 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.069 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.069 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.069 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.070 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.070 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.070 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.070 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.070 ERROR  r.v.c.r.c.gameservice.Table - Cell is not specified for firstInit piece.
+10:13:06.073 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: A7 successfully.
+10:13:06.073 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: B7 successfully.
+10:13:06.073 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: C7 successfully.
+10:13:06.073 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: D7 successfully.
+10:13:06.073 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: E7 successfully.
+10:13:06.073 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: F7 successfully.
+10:13:06.074 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: G7 successfully.
+10:13:06.075 INFO   r.v.c.r.c.gameservice.Table - Piece P was put on: H7 successfully.
+10:13:06.079 INFO   r.v.c.r.c.gameservice.Table - Piece R was put on: A8 successfully.
+10:13:06.082 INFO   r.v.c.r.c.gameservice.Table - Piece Knt was put on: B8 successfully.
+10:13:06.086 INFO   r.v.c.r.c.gameservice.Table - Piece B was put on: C8 successfully.
+10:13:06.089 INFO   r.v.c.r.c.gameservice.Table - Piece Q was put on: D8 successfully.
+10:13:06.091 INFO   r.v.c.r.c.gameservice.Table - Piece K was put on: E8 successfully.
+10:13:06.092 INFO   r.v.c.r.c.gameservice.Table - Piece B was put on: F8 successfully.
+10:13:06.092 INFO   r.v.c.r.c.gameservice.Table - Piece Knt was put on: G8 successfully.
+10:13:06.092 INFO   r.v.c.r.c.gameservice.Table - Piece R was put on: H8 successfully.
+10:13:06.261 INFO   r.v.c.r.c.gameservice.Table - Table was init successfully.
+10:13:28.809 INFO   r.v.c.r.c.essence.board.Board - F7
+10:13:36.959 INFO   r.v.c.r.c.g.Controller - Application launched successfully.

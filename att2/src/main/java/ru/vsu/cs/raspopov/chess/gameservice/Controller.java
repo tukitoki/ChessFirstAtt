@@ -83,7 +83,7 @@ public class Controller extends Application {
         pane.setTop(menuBar);
     }
 
-    public static void endGame(Color color) {
+    public void endGame(Color color) {
         Stage stage = new Stage();
         Label text = new Label();
         text.setFont(new Font("Arial", 30));
