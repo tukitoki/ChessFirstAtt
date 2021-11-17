@@ -1,8 +1,9 @@
 package ru.vsu.cs.raspopov.chess.essence.board;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Position {
+public class Position implements Serializable {
 
     private char column;
     private int row;
@@ -28,22 +29,25 @@ public class Position {
         this.row = row;
     }
 
+    public boolean posOnDesk() {
+        return this.getRow() <= 8 && this.getRow() >= 1 && this.getColumn() >= 'A' && this.getColumn() <= 'H';
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        try {
-            String position = (String) o;
-            return column == position.charAt(0) && row == Character.getNumericValue(position.charAt(1));
-        } catch (ClassCastException e) {
-            e.printStackTrace();
-        }
-        return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Position position = (Position) o;
+        return column == position.column && row == position.row;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(column, row);
+    }
+
+    @Override
+    public String toString() {
+        return Character.toString(this.column) + Integer.toString(this.row);
     }
 }
