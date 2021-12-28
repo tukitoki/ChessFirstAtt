@@ -117,9 +117,9 @@ public class Controller extends Application {
                 DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true);
         simpleModule.addDeserializer(Board.class, new BoardJsonDeserializer());
         mapper.registerModule(simpleModule);
-        simpleModule.addSerializer(Board.class, new BoardJsonSerializer());
-        mapper.registerModule(simpleModule);
-        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+//        simpleModule.addSerializer(Board.class, new BoardJsonSerializer());
+//        mapper.registerModule(simpleModule);
+//        mapper.enable(SerializationFeature.INDENT_OUTPUT);
         try {
             table.setBoard(mapper.readValue(file, Board.class));
             logger.info("Game was loaded successfully");

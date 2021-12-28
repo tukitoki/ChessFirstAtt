@@ -36,13 +36,6 @@ public class GraphicCell extends Label {
         this.setGraphic(imageView);
     }
 
-    public GraphicCell getGraphicCellByPos(Position pos) {
-        if (pos.equals(this.position)) {
-            return this;
-        }
-        return null;
-    }
-
     public Position getPosition() {
         return position;
     }
@@ -138,9 +131,6 @@ public class GraphicCell extends Label {
                         piece.move(table.getBoard(), cell);
                     }
                 }
-                //source.getAccessibleFields().forEach(ChessField::resetBackgroundColor);
-                //source.move(this, true);
-                //getBoard().nextTurn();
                 table.gameTest();
             }
         }
