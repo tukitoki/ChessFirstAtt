@@ -42,7 +42,13 @@ public class Main {
             System.err.println("Wrong method, try again");
             start(sc, setTypes,clz, set);
         }
-        Method method = methods.get(0);
+        int methodSize = 0;
+        if (methods.size() > 1) {
+            System.out.println("What method u want to use with(type 0)" + methods.get(0).getParameterCount() +
+                    " parameters or " + methods.get(1).getParameterCount() + " parameters(type 1)");
+            methodSize = Integer.parseInt(sc.nextLine());
+        }
+        Method method = methods.get(methodSize);
         int parametersCount = method.getParameterCount();
         if (parametersCount > 0) {
             Class[] clzs = method.getParameterTypes();

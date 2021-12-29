@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="ru.vsu.cs.raspopov.MyHashSetTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="ru.vsu.cs.raspopov.MyHashSetTest" time="0.014" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17+35-LTS-2724"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\maven\apache-maven-3.8.3\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,9 +63,12 @@
     <property name="sun.stdout.encoding" value="cp866"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testContains03" time="0.007"/>
-  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testRemove01" time="0"/>
-  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testContains02" time="0"/>
-  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testRemove02" time="0"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testContains03" time="0.008"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testConaintsAll01" time="0.001"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testConaintsAll02" time="0"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testRemove02" time="0.001"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testContains02" time="0.001"/>
   <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testContains01" time="0"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testRemove01" time="0.001"/>
+  <testcase classname="ru.vsu.cs.raspopov.MyHashSetTest" name="ru.vsu.cs.raspopov.MyHashSetTest.testContains04" time="0.002"/>
 </testsuite>

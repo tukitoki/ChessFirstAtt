@@ -14,7 +14,7 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
     private float loadFactory;
     private int threshold;
 
-    protected class Node <T> implements Cloneable, Serializable{
+    protected class Node <T> implements Cloneable, Serializable {
 
         private int hash;
         private final T value;
@@ -45,6 +45,7 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
         public int hashCode() {
             return Objects.hash(hash, value, next);
         }
+
         @Override
         public Object clone() throws CloneNotSupportedException{
             return super.clone();
@@ -64,6 +65,17 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
 
     private int index(int hash) {
         return hash & (currentCapacity - 1);
+    }
+
+    public MyMultiHashSet(Object... args) {
+        nodes = new Node[DEFAULT_CAPACITY];
+        currentCapacity = DEFAULT_CAPACITY;
+        size = 0;
+        loadFactory = DEFAULT_LOAD_FACTORY;
+        threshold = (int) (loadFactory * currentCapacity);
+        for (Object obj : args) {
+            add((T) obj, 1);
+        }
     }
 
     public MyMultiHashSet() {
@@ -101,8 +113,13 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
         Node<T> newNodes[] = nodes;
         if (threshold < size) {
             size = 0;
-            nodes = new Node[currentCapacity * 2];
-            currentCapacity = currentCapacity * 2;
+            if (currentCapacity > 5000) {
+                nodes = new Node[currentCapacity + currentCapacity / 6];
+                currentCapacity = currentCapacity + currentCapacity / 6;
+            } else {
+                nodes = new Node[currentCapacity * 2];
+                currentCapacity = currentCapacity * 2;
+            }
             threshold = (int) (loadFactory * currentCapacity);
             for (Node<T> obj : newNodes) {
                 if (obj == null) {
@@ -120,11 +137,11 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
         }
     }
 
-//    @Override
-//    public boolean add(T element) {
-//        add(element, 1);
-//        return true;
-//    }
+    @Override
+    public boolean add(T element) {
+        add(element, 1);
+        return true;
+    }
 
     public final int add(T element, int occurrences) {
         Node<T> addedElement = newNode(element.hashCode(), element);
@@ -161,13 +178,13 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
         return 0;
     }
 
-//    @Override
-//    public boolean remove(Object element) {
-//        if (remove(element, 1) != 0) {
-//            return true;
-//        }
-//        return false;
-//    }
+    @Override
+    public boolean remove(Object element) {
+        if (remove(element, 1) != 0) {
+            return true;
+        }
+        return false;
+    }
 
     public final int remove(Object o, int occurrences) {
         Node<T> deletedElement = newNode(o.hashCode(), (T) o);
@@ -265,6 +282,35 @@ public class MyMultiHashSet<T> implements Iterable<T>, MultiHashSetInterface<T>,
 
     @Override
     public final int setCount(T element, int count) {
+        Node<T> findElement = newNode(element.hashCode(), element);
+        int index = index(findElement.hash);
+        if (nodes[index] == null) {
+            return 0;
+        }
+        if (nodes[index].hash == findElement.hash) {
+            if (nodes[index].value.equals(findElement.value)) {
+                int occ = nodes[index].occurrences;
+                nodes[index].occurrences = count;
+                if (count <= 0) {
+                    nodes[index] = nodes[index].next;
+                }
+                return occ;
+            }
+            Node<T> node = nodes[index];
+            while (node.next != null) {
+                if (node.next.hash == findElement.hash) {
+                    if (node.next.value.equals(findElement.value)) {
+                        int occ = node.next.occurrences;
+                        node.next.occurrences = count;
+                        if (count <= 0) {
+                            node.next = node.next.next;
+                        }
+                        return occ;
+                    }
+                }
+                node = node.next;
+            }
+        }
         return 0;
     }
 

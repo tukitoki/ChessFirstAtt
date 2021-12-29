@@ -96,4 +96,46 @@ public class MyHashSetTest {
         set.remove(1);
         Assertions.assertTrue(!set.contains(25));
     }
+
+    @Test
+    public void testContains04() {
+        MyHashSet<Integer> set = new MyHashSet<>();
+        set.add(1);
+        set.add(1111);
+        set.add(4242);
+        set.add(111111);
+        set.add(1000);
+        set.add(4000);
+        set.add(1111111);
+        set.add(111);
+        set.add(1000);
+        set.add(1111111);
+        set.remove(23);
+        set.remove(1);
+        Assertions.assertTrue(set.contains(1111111));
+    }
+
+    @Test
+    public void testConaintsAll01() {
+        MyHashSet<Integer> set = new MyHashSet<>();
+        set.add(1);
+        set.add(1111);
+        set.add(4242);
+        set.add(111111);
+        set.add(1000);
+        set.add(4000);
+        Assertions.assertTrue(set.containsAll(new MyHashSet<>(1, 1111, 4242, 111111, 1000, 4000)));
+    }
+
+    @Test
+    public void testConaintsAll02() {
+        MyHashSet<Integer> set = new MyHashSet<>();
+        set.add(1);
+        set.add(1111);
+        set.add(4242);
+        set.add(111111);
+        set.add(1000);
+        set.add(4000);
+        Assertions.assertTrue(!set.containsAll(new MyHashSet<>(1, 1111, 4242, 111111, 1000, 365)));
+    }
 }

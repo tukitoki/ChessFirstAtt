@@ -2,11 +2,11 @@ package ru.vsu.cs.raspopov;
 
 public interface MultiHashSetInterface<T> {
 
-//    public boolean add(T element);
+    public boolean add(T element);
 
     public int add(T element, int occurrences);
 
-//    public boolean remove(Object element);
+    public boolean remove(Object element);
 
     public int remove(Object element, int occurrences);
 

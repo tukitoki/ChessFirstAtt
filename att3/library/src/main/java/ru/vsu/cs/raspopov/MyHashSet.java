@@ -8,6 +8,13 @@ public class MyHashSet <T> implements SetInterface<T>, Iterable<T>, Cloneable, S
 
     private MyMultiHashSet<T> mySet;
 
+    public MyHashSet(Object... args) {
+        mySet = new MyMultiHashSet<>();
+        for (Object obj : args) {
+            mySet.add((T) obj, 1);
+        }
+    }
+
     public MyHashSet() {
         mySet = new MyMultiHashSet<>();
     }
